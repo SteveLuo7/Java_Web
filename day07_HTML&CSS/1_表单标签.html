@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+
+<!--form-->
+<form action="#" method="get">
+    <label for="username">用户名：<input name="username" type="text" placeholder="请输入用户名" id="username"></label> <br>
+    <label for="password">密码：<input name="password" type="password" placeholder="请输入密码" id="password"></label> <br>
+    性别:<input type="radio" name="gender" value="male"> 男
+        <input type="radio" name="gender" value="female"> 女
+    <br>
+    爱好：<input type="checkbox" name="hobby" value="shopping"> 逛街
+        <input type="checkbox" name="hobby" value="singsong"> 唱歌
+        <input type="checkbox" name="hobby" value="java" checked> Java
+        <input type="checkbox" name="hobby" value="english"> English
+        <input type="checkbox" name="hobby" value="movie"> Movie
+    <br>
+
+    头像:  <input type="file" name="file"> <br>
+
+    隐藏域： <input type="hidden" name="hidden">
+    <br>
+
+    取色器: <input type="color" name="color"> <br>
+    
+    生日: <input type="date" name="birthday"> <br>
+    生日: <input type="datetime-local" name="birthday"> <br>
+    邮箱: <input type="email" name="email"> <br>
+
+    <hr>
+
+    省份： <select name="province" id="">
+                            <option value="">--请选择--</option>
+                            <option value="1">广西</option>
+                            <option value="2">河南</option>
+                            <option value="3">广东</option>
+                            <option value="4">上海</option>
+        </select>
+        <br>
+    
+    自我描述: <textarea name="self" id="" cols="30" rows="5"></textarea>
+
+
+
+
+    <input type="button" value="start"> <br>
+    <input type="submit" value="登录" > <br>
+    <input type="image" src="img/regbtn.jpg">
+</form>
+</body>
+</html>

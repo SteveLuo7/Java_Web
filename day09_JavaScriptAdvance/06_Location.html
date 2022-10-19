@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+</head>
+<body>
+
+<input type="button" value="button" id="btn">
+<input type="button" value="itcast" id="itcast">
+
+<script>
+
+    var btn = document.getElementById("btn");
+    btn.onclick = function (){
+        location.reload();
+    }
+
+    var href = location.href;
+    var itcast = document.getElementById("itcast");
+    itcast.onclick = function (){
+        location.href = "https://www.itcast.cn"
+    }
+
+</script>
+</body>
+</html>

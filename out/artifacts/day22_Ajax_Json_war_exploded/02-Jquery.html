@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生js实现ajax</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<script>
+    function fun(){
+      $.ajax({
+          url:"ajaxServlet",
+          type:"POST",
+          data:{"username":"jack","age":22},
+          success:function (data){
+              alert(data);
+          },
+          error:function (){
+              alert("oops")
+          },
+          dataType:"text"
+
+      });
+    }
+
+
+</script>
+<body>
+
+
+
+    <input type="button" value="send async" onclick="fun();">
+    <input>
+</body>
+</html>

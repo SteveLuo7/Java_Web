@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生js实现ajax</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+</head>
+<script>
+    function fun(){
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {
+            //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.open("GET","ajaxServlet?username=tom",true);
+        xmlhttp.send();
+
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+                var responseText = xmlhttp.responseText;
+                alert(responseText);
+            }
+        }
+
+
+    }
+
+
+</script>
+<body>
+
+
+
+    <input type="button" value="send async" onclick="fun();">
+    <input type="text">
+</body>
+</html>
